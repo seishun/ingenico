@@ -13,7 +13,7 @@ public class BasicTypes {
 
         int i = 4;
         i = 1_000_000;
-        i = Integer.MAX_VALUE;
+        i = Integer.SIZE;
 
         long l = 99;
         l = 99_000L;
@@ -25,7 +25,7 @@ public class BasicTypes {
 
         float f = 45;
         f = 45F;
-        f = 45f;
+        f = 45F;
         f = 0.45F;
         f = .45f;
 
@@ -36,9 +36,13 @@ public class BasicTypes {
         boolean bool = true;
 
         String string = "some value";
+
         String anotherString = new String("some value");
 
         BigDecimal bigDecimal = new BigDecimal("0.13");
+
+        BigDecimal result = bigDecimal.add(new BigDecimal(15));
+
         BigInteger bigInteger = new BigInteger("1234");
 
         int[] intes = new int[2];
@@ -56,5 +60,6 @@ public class BasicTypes {
         /**
          * javadoc comment
          * */
+
     }
 }

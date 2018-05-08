@@ -1,5 +1,7 @@
 package lv.javaguru.courses.ingenico.lecture0;
 
+import java.math.BigDecimal;
+
 public class ClassStructure {
 
     public static final String INITIALIZED_STATIC_CONSTANT = "static initialized constant";
@@ -8,23 +10,22 @@ public class ClassStructure {
 
     private static long staticVariable;
 
-    //static initialization block
+    //static initialization block, executes once by Class Loader
     static {
-        //do something
         INT_CONSTANT = 4;
+        staticVariable = -1L;
     }
+
+    private final BigDecimal bigDecimal;
 
     private String instanceStringField;
 
     private int instanceIntField;
 
-    // instance initialization block, executes before constructor
-    {
-        instanceIntField = 10;
-    }
-
     public ClassStructure(String instanceStringField) {
+        this.instanceIntField = 10;
         this.instanceStringField = instanceStringField;
+        this.bigDecimal = new BigDecimal("13");
     }
 
     public ClassStructure(String instanceStringField, int instanceIntField) {
@@ -54,5 +55,11 @@ public class ClassStructure {
 
     public void setInstanceIntField(int instanceIntField) {
         this.instanceIntField = instanceIntField;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(System.getProperty("user.home"));
+        Boolean b = null;
+        System.out.println(b);
     }
 }
