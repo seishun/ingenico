@@ -3,7 +3,7 @@ package lv.javaguru.courses.ingenico.lecture0;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
-public class Main {
+public class BasicTypes {
 
     public static void main(String[] args) {
         byte b = 123;
