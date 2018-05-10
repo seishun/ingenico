@@ -1,4 +1,4 @@
-package lv.javaguru.courses.ingenico.lecture1.inheritance;
+package lv.javaguru.courses.ingenico.lecture1.inheritance.plain;
 
 import java.io.IOException;
 import java.io.InputStream;
