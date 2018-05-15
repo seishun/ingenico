@@ -1,5 +1,7 @@
 package lv.javaguru.courses.ingenico.lecture2.generics.methods;
 
+import lv.javaguru.courses.ingenico.lecture2.enums.ObjectPredicates;
+
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -36,8 +38,8 @@ public class GenericMethods {
         List<String> list = new ArrayList<>();
         list.add("string");
         list.add("string 2");
-        Predicate<CharSequence> predicate = (charSequence) -> charSequence.length() > 7;
-        List<String> all = findAll(list, predicate);
+        Predicate<String> p = (string) -> string.isEmpty();
+        List<String> all = findAll(list, ObjectPredicates.ALWAYS_TRUE);
         System.out.println(all);
     }
 

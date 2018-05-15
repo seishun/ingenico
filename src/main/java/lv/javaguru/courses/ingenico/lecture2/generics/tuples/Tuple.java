@@ -1,5 +1,7 @@
 package lv.javaguru.courses.ingenico.lecture2.generics.tuples;
 
+import java.security.MessageDigest;
+
 public class Tuple<T1> {
 
     private T1 first;

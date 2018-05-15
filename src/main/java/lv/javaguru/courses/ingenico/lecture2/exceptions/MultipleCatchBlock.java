@@ -10,7 +10,7 @@ import java.util.List;
 
 public class MultipleCatchBlock {
 
-    public static void main(String[] args) {
+    public static void main(String[] args){
         FileReader fileReader = null;
         BufferedReader bufferedReader = null;
         try{

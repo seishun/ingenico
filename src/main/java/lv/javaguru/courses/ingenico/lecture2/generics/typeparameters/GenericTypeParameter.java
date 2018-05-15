@@ -17,6 +17,10 @@ public class GenericTypeParameter {
         Integer intValue = tuple2.getSecond();
 
 //        because after compilation it looks
+//
+//        Tuple2<String, Integer> tuple2 = new Tuple2<>("string", 4);
+//        Integer intValue = tuple2.getSecond();
+
 //        Tuple2 tuple2 = new Tuple2("string", 4);
 //        Integer intValue = (Integer) tuple2.getSecond();
     }
