@@ -2,6 +2,8 @@ package lv.javaguru.courses.ingenico.lecture1.inheritance.anonymous;
 
 public class User {
 
+    public static final int a = 4;
+
     private int id;
     private String email;
 
@@ -28,8 +30,12 @@ public class User {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
 
         User user = (User) o;
 

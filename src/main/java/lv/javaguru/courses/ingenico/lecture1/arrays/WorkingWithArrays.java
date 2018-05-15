@@ -2,6 +2,7 @@ package lv.javaguru.courses.ingenico.lecture1.arrays;
 
 import java.security.SecureRandom;
 import java.util.Arrays;
+import java.util.Random;
 
 public class WorkingWithArrays {
 
@@ -14,6 +15,7 @@ public class WorkingWithArrays {
                 System.out.println(i);
             }
         }
+
     }
 
     private static void randomlyFillArray(int[][] array){

@@ -2,6 +2,8 @@ package lv.javaguru.courses.ingenico.lecture1.inheritance.plain;
 
 import lv.javaguru.courses.ingenico.utils.Assert;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.nio.charset.Charset;
 import java.util.Arrays;
 import java.util.Collections;
@@ -18,6 +20,11 @@ public abstract class AbstractHttpMessageConverter<T> implements MessageConverte
 
     protected AbstractHttpMessageConverter(String... supportedMediaTypes) {
         setSupportedMediaTypes(Arrays.asList(supportedMediaTypes));
+    }
+
+    @Override
+    public T read(InputStream inputStream) throws IOException {
+        return null;
     }
 
     @Override
