@@ -5,7 +5,7 @@ import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 public class SentencesCounter {
 
     /*
-    * Read text file.
+    * Read text.txt file.
     * Count how many sentences in text
     * Sentence which contains only whitespaces or tabs is not sentence
     *
