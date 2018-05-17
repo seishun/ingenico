@@ -2,8 +2,6 @@ package lv.javaguru.courses.ingenico.lecture1.inheritance.anonymous;
 
 public class User {
 
-    public static final int a = 4;
-
     private int id;
     private String email;
 
