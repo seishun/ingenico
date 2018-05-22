@@ -17,7 +17,8 @@ public class UserRepository {
 
     private final Set<User> users;
 
-    private UserRepository(Set<User> users) {
+    //for singleton in must be private!
+    public UserRepository(Set<User> users) {
         this.users = users;
     }
 
