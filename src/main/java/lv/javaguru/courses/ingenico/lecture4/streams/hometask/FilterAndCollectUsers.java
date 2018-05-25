@@ -22,7 +22,14 @@ public class FilterAndCollectUsers {
     *
     * */
     public Map<Character, List<User>> findAllActiveUsersGroupedByFirstNicknameLetter(UserRepository repository) {
-        return new HashMap<>();
+        return repository.getAll().stream()
+                .filter(User::isActive)
+                .sorted(Comparator.comparing(User::getNickname).reversed())
+                .collect(
+                    Collectors.groupingBy(
+                            user -> user.getNickname().charAt(0), Collectors.toList()
+                    )
+                );
     }
 
 

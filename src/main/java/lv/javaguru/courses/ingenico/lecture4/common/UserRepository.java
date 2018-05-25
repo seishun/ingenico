@@ -30,39 +30,28 @@ public class UserRepository {
         return Collections.unmodifiableList(new ArrayList<>(users));
     }
 
-    /*
-     * TODO : home task
-     * rewrite methods using lambdas and streams
-     * */
-
     public User findByNickname(String nickname) {
         Assert.notEmpty(nickname, "nickname");
-        for (User user : users) {
-            if (nickname.equals(user.getNickname())) {
-                return user;
-            }
-        }
-        return null;
+        return users.stream()
+                .filter(user -> nickname.equals(user.getNickname()))
+                .findFirst()
+                .orElse(null);
     }
 
     public User findByFacebookId(String facebookId) {
         Assert.notEmpty(facebookId, "facebookId");
-        for (User user : users) {
-            if (facebookId.equals(user.getFacebookId())) {
-                return user;
-            }
-        }
-        return null;
+        return users.stream()
+                .filter(user -> facebookId.equals(user.getFacebookId()))
+                .findFirst()
+                .orElse(null);
     }
 
     public User findByTwitterId(String twitterId) {
         Assert.notEmpty(twitterId, "twitterId");
-        for (User user : users) {
-            if (twitterId.equals(user.getTwitterId())) {
-                return user;
-            }
-        }
-        return null;
+        return users.stream()
+                .filter(user -> twitterId.equals(user.getTwitterId()))
+                .findFirst()
+                .orElse(null);
     }
 
     public void save(User user) {
